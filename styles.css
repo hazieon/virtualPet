@@ -30,7 +30,11 @@ body {
   height: 10vh;
   width: 90vw;
 }
-
+.cave {
+  position: absolute;
+  height: 10vh;
+  width: auto;
+}
 .dragon {
   position: absolute;
   height: 10vh;

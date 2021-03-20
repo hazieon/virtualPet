@@ -2,28 +2,27 @@ const sky = document.querySelector(".sky");
 const land = document.querySelector(".land");
 const dragon = document.querySelector(".dragon");
 
-let speed = 3;
-let velX = 0;
-let velY = 0;
-/////jump and friction and gravity
-let jump = false;
-let friction = 1;
-let gravity = 0.1;
+// let speed = 3;
+// let velX = 0;
+// let velY = 0;
+// /////jump and friction and gravity
+// let jump = false;
+// let friction = 1;
+// let gravity = 0.1;
 
-velX *= friction;
-velY += gravity;
+// velX *= friction;
+// velY += gravity;
 
-//moves player side to side
-dragon.style.left += velX;
-dragon.style.top += velY;
+// //moves player side to side
+// dragon.style.left += velX;
+// dragon.style.top += velY;
 
 function moveLeft() {
   if (parseInt(dragon.style.left) > 0) {
     dragon.style.transform = "scaleX(1)";
-    dragon.style.left = parseInt(dragon.style.left) - 5 + "px";
+    dragon.style.left = parseInt(dragon.style.left) - 1 + "vw";
 
-    velX--;
-    //Number(dragon.style.left) + 2 + "px";
+    // velX--;
   } else {
     dragon.style.left = dragon.style.left;
   }
@@ -31,11 +30,11 @@ function moveLeft() {
 }
 
 function moveRight() {
-  if (parseInt(dragon.style.left) < 450) {
+  if (parseInt(dragon.style.left) < 70) {
     dragon.style.transform = "scaleX(-1)";
-    dragon.style.left = parseInt(dragon.style.left) + 5 + "px";
+    dragon.style.left = parseInt(dragon.style.left) + 1 + "vw";
 
-    velX++;
+    // velX++;
   } else {
     dragon.style.left = dragon.style.left;
   }
@@ -60,10 +59,10 @@ function moveUp() {
 }
 
 function moveJump() {
-  if (!jump) {
-    jump = true;
-    velY = -speed * 2;
-  }
+  //   if (!jump) {
+  //     jump = true;
+  //     velY = -speed * 2;
+  //   }
   console.log("jump");
 }
 function moveDragon(event) {
