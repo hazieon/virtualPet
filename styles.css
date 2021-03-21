@@ -144,21 +144,25 @@ body {
 }
 
 .item-box {
+  user-select: none;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 2fr));
   column-gap: 3rem;
   color: rgb(255, 255, 255);
   text-align: center;
   cursor: pointer;
   z-index: 2;
+  margin-left: 1rem;
 }
 .item {
   margin: 5%;
   cursor: pointer;
   max-width: 28vw;
+  user-select: none;
 }
 
 .box {
+  user-select: none;
   border: 3px solid black;
   border-radius: 10px;
   overflow: hidden;
@@ -167,12 +171,14 @@ body {
 }
 
 .food-bar {
+  user-select: none;
   border-radius: 5px;
   cursor: pointer;
   border-bottom: 10px solid rgb(161, 255, 161);
   max-width: 29vw;
 }
 .nest-bar {
+  user-select: none;
   border-radius: 5px;
   position: relative;
   cursor: pointer;
