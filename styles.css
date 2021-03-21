@@ -133,19 +133,19 @@ body {
 
 #food {
   border-radius: 15px;
-  border: 6px solid rgb(99, 191, 252);
+  border: 4px solid rgb(99, 191, 252);
   cursor: cell;
 }
 
 #nest {
   border-radius: 15px;
-  border: 6px solid rgb(175, 255, 164);
+  border: 4px solid rgb(175, 255, 164);
   cursor: cell;
 }
 
 .item-box {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 3rem;
   color: rgb(255, 255, 255);
   text-align: center;
