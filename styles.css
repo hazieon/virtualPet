@@ -93,8 +93,9 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  box-shadow: 0px 1px 4px 2px rgb(202, 230, 255);
+  box-shadow: 0px 2px 4px 2px rgb(202, 230, 255);
   opacity: 95%;
+  cursor: grab;
 }
 
 .grid:hover {
@@ -128,4 +129,53 @@ body {
   position: absolute;
   height: 10vh;
   width: auto;
+}
+
+#food {
+  border-radius: 15px;
+  border: 6px solid rgb(99, 191, 252);
+  cursor: cell;
+}
+
+#nest {
+  border-radius: 15px;
+  border: 6px solid rgb(175, 255, 164);
+  cursor: cell;
+}
+
+.item-box {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 3rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.item {
+  margin: 5%;
+  cursor: pointer;
+  max-width: 28vw;
+}
+
+.box {
+  border: 3px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  /* max-width: 28vw; */
+}
+
+.food-bar {
+  border-radius: 5px;
+  cursor: pointer;
+  border-bottom: 10px solid rgb(161, 255, 161);
+  max-width: 29vw;
+}
+.nest-bar {
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 10px solid rgb(161, 255, 161);
+  max-width: 29vw;
 }

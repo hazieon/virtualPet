@@ -58,12 +58,25 @@ function moveUp() {
     dragon.style.top = dragon.style.top;
   }
 }
+const foodBar = document.querySelector(".food-bar");
+const nestBar = document.querySelector(".nest-bar");
+foodBar.addEventListener("click", addFood);
+nestBar.addEventListener("click", addNest);
+function addFood() {
+  console.log("food");
+  foodBar.style.width = parseInt(foodBar.style.width) + 1 + "vh";
+}
+function addNest() {
+  console.log("nest");
+  nestBar.style.width = parseInt(nestBar.style.width) + 1 + "vh";
+}
 
 function moveJump() {
   //   if (!jump) {
   //     jump = true;
   //     velY = -speed * 2;
   //   }
+
   console.log("jump");
 }
 function moveDragon(event) {
