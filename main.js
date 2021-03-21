@@ -30,7 +30,7 @@ function moveLeft() {
 }
 
 function moveRight() {
-  if (parseInt(dragon.style.left) < 70) {
+  if (parseInt(dragon.style.left) < 75) {
     dragon.style.transform = "scaleX(-1)";
     dragon.style.left = parseInt(dragon.style.left) + 1 + "vw";
 
@@ -38,6 +38,7 @@ function moveRight() {
   } else {
     dragon.style.left = dragon.style.left;
   }
+
   //   console.log(dragon.style.left);
 }
 function moveDown() {
@@ -82,6 +83,9 @@ function moveDragon(event) {
     case 32:
       moveJump();
       break;
+  }
+  if ([32, 37, 38, 39, 40].indexOf(event.code) > -1) {
+    event.preventDefault();
   }
 }
 function gameLoop() {
