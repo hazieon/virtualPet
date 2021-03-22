@@ -93,6 +93,7 @@ body {
   position: absolute;
   height: 17vh;
   width: auto;
+  transform: scaleX(-1);
 }
 .dragon {
   position: absolute;
