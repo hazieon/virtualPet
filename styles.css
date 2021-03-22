@@ -1,50 +1,20 @@
 body {
-  background-color: black;
+  background-color: rgb(34, 34, 34);
   text-align: center;
 }
 .heading {
-  font-family: "Tahoma";
+  margin: 0;
+  font-family: "Luna";
+  font-size: medium;
   color: white;
   text-shadow: 0px 2px 3px rgb(202, 230, 255);
 }
-/* .live-box {
-  position: absolute;
-  align-items: center;
-  top: 10px;
-  left: 521px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100px;
-  z-index: 2;
-} */
-/* .live-dot {
-  margin: 0.5rem;
-  position: relative;
-  height: 10px;
-  width: 10px;
-  border-radius: 100%;
-  background-color: rgb(255, 61, 61);
-  box-shadow: 0px 2px 4px 2px coral;
-} */
-
-/* .live-box {
-  position: relative;
-  z-index: 2;
-  align-items: center;
-  text-align: center;
+.subheading {
+  font-family: "Luna";
+  margin: 5px;
+  color: rgb(185, 195, 204);
+  font-size: xx-small;
 }
-.live-dot {
-  height: 10px;
-  width: 10px;
-  border-radius: 100%;
-  background-color: rgb(255, 61, 61);
-  box-shadow: 0px 2px 4px 2px coral;
-  position: absolute;
-  top: 0;
-  right: 95px;
-  margin: 0.5rem;
-} */
 
 .live-box {
   position: relative;
@@ -88,7 +58,7 @@ body {
 .grid {
   margin: auto;
   background-color: rgb(202, 230, 255);
-  height: 80vh;
+  height: 78vh;
   width: 90vw;
   overflow: hidden;
   position: relative;
@@ -123,24 +93,31 @@ body {
   position: absolute;
   height: 17vh;
   width: auto;
-  transform: scaleX(-1);
 }
 .dragon {
   position: absolute;
   height: 10vh;
   width: auto;
+  user-select: none;
+}
+.dragon-box {
+  left: 0vh;
+  right: 0vh;
+  top: 62vh;
 }
 
 #food {
   border-radius: 15px;
   border: 4px solid rgb(99, 191, 252);
   cursor: cell;
+  padding: 3px;
 }
 
 #nest {
   border-radius: 15px;
   border: 4px solid rgb(175, 255, 164);
   cursor: cell;
+  padding: 3px;
 }
 
 .item-box {
@@ -154,20 +131,24 @@ body {
   z-index: 2;
   margin-left: 1rem;
 }
+
 .item {
   margin: 5%;
   cursor: pointer;
   max-width: 28vw;
   user-select: none;
+  height: fit-content;
 }
 
+.item-text {
+  margin: 0.1rem;
+}
 .box {
   user-select: none;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  /* max-width: 28vw; */
 }
 
 .food-bar {
@@ -184,4 +165,21 @@ body {
   cursor: pointer;
   border-bottom: 10px solid rgb(161, 255, 161);
   max-width: 29vw;
+  transform: translateY();
 }
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .dragon-box {
+    animation: jump infinite 1s linear alternate-reverse;
+  }
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    transform: translateY(20px);
+  }
+} */

@@ -1,6 +1,12 @@
 const sky = document.querySelector(".sky");
 const land = document.querySelector(".land");
 const dragon = document.querySelector(".dragon");
+const foodBar = document.querySelector(".food-bar");
+const nestBar = document.querySelector(".nest-bar");
+const foodText = document.querySelector("#food-text");
+const nestText = document.querySelector("#nest-text");
+foodBar.addEventListener("click", addFood);
+nestBar.addEventListener("click", addNest);
 
 // let speed = 3;
 // let velX = 0;
@@ -21,8 +27,6 @@ function moveLeft() {
   if (parseInt(dragon.style.left) > 0) {
     dragon.style.transform = "scaleX(1)";
     dragon.style.left = parseInt(dragon.style.left) - 1 + "vw";
-
-    // velX--;
   } else {
     dragon.style.left = dragon.style.left;
   }
@@ -33,8 +37,6 @@ function moveRight() {
   if (parseInt(dragon.style.left) < 75) {
     dragon.style.transform = "scaleX(-1)";
     dragon.style.left = parseInt(dragon.style.left) + 1 + "vw";
-
-    // velX++;
   } else {
     dragon.style.left = dragon.style.left;
   }
@@ -58,24 +60,25 @@ function moveUp() {
     dragon.style.top = dragon.style.top;
   }
 }
-const foodBar = document.querySelector(".food-bar");
-const nestBar = document.querySelector(".nest-bar");
-foodBar.addEventListener("click", addFood);
-nestBar.addEventListener("click", addNest);
+
 function addFood() {
-  console.log("food");
-  foodBar.style.width = parseInt(foodBar.style.width) + 1 + "vh";
+  if (foodBar.style.width === "26vw") {
+    foodText.innerText = "Dziękuję~ ♡";
+  }
+  foodBar.style.width = parseInt(foodBar.style.width) + 1 + "vw";
 }
 function addNest() {
-  console.log("nest");
-  nestBar.style.width = parseInt(nestBar.style.width) + 1 + "vh";
+  if (nestBar.style.width === "26vw") {
+    nestText.innerText = "Grazie~ ♥";
+  }
+  nestBar.style.width = parseInt(nestBar.style.width) + 1 + "vw";
 }
 
 function moveJump() {
-  //   if (!jump) {
-  //     jump = true;
-  //     velY = -speed * 2;
-  //   }
+  // if (!jump) {
+  //   jump = true;
+  //   dragon.style.translate;
+  // }
 
   console.log("jump");
 }
